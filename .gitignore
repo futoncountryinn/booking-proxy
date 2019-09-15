@@ -4,10 +4,12 @@
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
 
+node_modules
+
 proxy/node_modules
 
-./sonny-service
+sonny-service
 
-./david-service
+david-service
 
-./allen-service
+allen-service
