@@ -3,3 +3,11 @@
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+
+proxy/node_modules
+
+./sonny-service
+
+./david-service
+
+./allen-service
