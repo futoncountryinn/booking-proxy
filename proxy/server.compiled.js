@@ -1,17 +1,19 @@
-const express = require('express');
+"use strict";
 
-const morgan = require('morgan');
+var express = require('express');
 
-const path = require('path');
+var morgan = require('morgan');
 
-const app = express();
-const port = 3000;
+var path = require('path');
 
-const cors = require('cors');
+var app = express();
+var port = 3000;
+
+var cors = require('cors');
 
 app.use(cors());
 app.use(morgan('dev'));
-app.use(express.static(path.join(__dirname, 'public')));
-app.listen(port, () => {
-  console.log(`server running at: ${port}`);
+app.use(express["static"](path.join(__dirname, 'public')));
+app.listen(port, function () {
+  console.log("server running at: ".concat(port));
 });
