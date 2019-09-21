@@ -1,5 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
+const compression = require('compression');
 const path = require('path');
 const app = express();
 const port = 3000;
@@ -15,11 +16,11 @@ app.listen(port, () => {
 });
 
 app.get('/reservation', (req, res) => {
-  const url = `http://localhost:3002/reservation`;
+  const url = `http://load-balancer-1-2135754840.us-east-2.elb.amazonaws.com/reservation`;
   axios.get(url).then((response) => {res.send(response.data)});
 });
 
 app.post('/reservation', (req, res) => {
-  const url = `http://localhost:3002/reservation`;
+  const url = `http://load-balancer-1-2135754840.us-east-2.elb.amazonaws.com/reservation`;
   axios.post(url).then((response) => {res.send(response.data)});
 });
